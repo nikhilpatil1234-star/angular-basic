@@ -1,0 +1,25 @@
+<p>structural-directives</p>
+<p>for ng if directives</p>
+
+<h2 *ngIf="ngIfDisplayName; else elseBlock">code Evalution</h2>
+<ng-template #elseBlock>
+  <h2>Hidden</h2>
+</ng-template>
+{{ ngIfDisplayName }}
+<div *ngIf="ngIfDisplayName; then positiveBlock; else negativeBlock"></div>
+<ng-template #positiveBlock>
+  <h2>this is to be displayed</h2>
+</ng-template>
+<ng-template #negativeBlock>
+  <h2>this is to be hidden</h2>
+</ng-template>
+<p>for switch example switch</p>
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">ths is red color</div>
+  <div *ngSwitchCase="'blue'">ths is blue color</div>
+  <div *ngSwitchCase="'green'">ths is green color</div>
+  <div *ngSwitchDefault>pick a color</div>
+</div>
+<div *ngFor="let x of colors; index as i">
+  <h2 style="color: blue">{{ i + 1 }} {{ x.toUpperCase() }}</h2>
+</div>

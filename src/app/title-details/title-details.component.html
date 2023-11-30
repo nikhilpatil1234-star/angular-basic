@@ -1,0 +1,10 @@
+<p>title-details works</p>
+<h1>this is title {{ titleId }}</h1>
+<h3>
+  <button (click)="showOverview()">Overview</button>
+  <button (click)="showContact()">contact</button>
+</h3>
+<router-outlet></router-outlet>
+<a (click)="goPrevious()"> previous</a>
+<a (click)="goNext()">Next </a>
+<button (click)="goToDepartment()">back</button>

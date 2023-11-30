@@ -1,0 +1,8 @@
+<p>services works!</p>
+<input type="search" placeholder="search " id="" />
+<div *ngFor="let x of employee">
+  <h1 (click)="onSelect(x.id)" [class.selected]="isSelected(x?.id)">
+    {{ x.id }} {{ x.title }}
+  </h1>
+</div>
+<h1>{{ errMsg }}</h1>

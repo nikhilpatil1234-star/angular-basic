@@ -1,0 +1,49 @@
+<p>template-driven works!</p>
+<div class="form-container" style="width: 400px; margin: 20px">
+  <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="form-group">
+      <label for="uName">User Name</label>
+      <input
+        ngModel
+        name="uName"
+        type="text"
+        id="uName"
+        class="form-control"
+        #uName="ngModel"
+        required
+      />
+      <small *ngIf="!uName.valid && uName.touched">
+        user name is required!!!!!!</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="Email">Email</label>
+      <input
+        ngModel
+        name="Email"
+        type="email"
+        id="Email"
+        class="form-control"
+        required
+        email
+        #Email="ngModel"
+      />
+      <small *ngIf="Email.errors && Email.touched">Email is required</small>
+    </div>
+    <div class="d-flex justify-content-between" style="margin-top: 10px">
+      <div class="form-group form-check">
+        <input
+          ngModel
+          name="form-check-label"
+          type="checkbox"
+          id="form-check-label"
+          required
+        />
+        <label for="form-check-label"
+          >I have read the term and conditions</label
+        >
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>

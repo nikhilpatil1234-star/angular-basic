@@ -1,0 +1,12 @@
+<p>classbinding works!</p>
+<h1 class="text-success"> rakesh patil</h1>
+<h2 [class]="successClass"> kousik</h2>
+<h3 [style.color]="'pink'"> Sachin</h3>
+<h2 [class.text-danger]="hasError" (click)="toggle()" > Error  messagae</h2>
+<h1 [ngClass]="messageClasses"> this is a special classs</h1>
+<button (click)="onChangeName($event)" > click to change the name</button>
+<button (click)="name1='this is nikhil'" > change to nikhil</button>
+
+{{name1}}
+
+
